@@ -32,6 +32,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFb-Cy-ZbU">
                                         <rect key="frame" x="8" y="8" width="184" height="40"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="CEd-af-szX"/>
                                         </constraints>
@@ -80,7 +81,6 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dEl-dr-fww" firstAttribute="centerX" secondItem="b9r-oC-Mjm" secondAttribute="centerX" id="QQf-h1-d0U"/>
                             <constraint firstItem="dEl-dr-fww" firstAttribute="top" secondItem="Jla-sz-ECg" secondAttribute="bottom" constant="70" id="WJG-Qg-gSJ"/>
@@ -202,6 +202,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bUD-Q9-nUf"/>
+        <segue reference="QN6-eK-YD8"/>
     </inferredMetricsTieBreakers>
 </document>
