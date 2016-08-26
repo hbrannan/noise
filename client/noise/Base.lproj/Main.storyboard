@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Splash-->
@@ -16,6 +17,21 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Noise Logo 1080x1920" translatesAutoresizingMaskIntoConstraints="NO" id="MAX-cs-Uog">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MAX-cs-Uog" secondAttribute="trailing" id="3bh-tO-bWq"/>
+                            <constraint firstItem="MAX-cs-Uog" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5AK-48-P8Z"/>
+                            <constraint firstItem="MAX-cs-Uog" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="BJ9-Ao-jgM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MAX-cs-Uog" secondAttribute="bottom" id="d7W-oh-hyX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MAX-cs-Uog" secondAttribute="trailing" constant="-20" id="e6b-7n-aln"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MAX-cs-Uog" secondAttribute="bottom" id="iRQ-we-Sgd"/>
+                            <constraint firstItem="MAX-cs-Uog" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jqd-tO-cOR"/>
+                            <constraint firstItem="MAX-cs-Uog" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zt8-uw-SbU"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -44,4 +60,7 @@
             <point key="canvasLocation" x="842" y="816"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Noise Logo 1080x1920" width="1080" height="1920"/>
+    </resources>
 </document>

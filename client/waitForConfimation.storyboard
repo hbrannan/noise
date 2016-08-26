@@ -28,21 +28,30 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eUo-cA-LWJ">
                                 <rect key="frame" x="154" y="200" width="240" height="128"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wait!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HS-16-aXN">
-                                        <rect key="frame" x="102" y="42" width="39" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Noise Logo 1080x1920" translatesAutoresizingMaskIntoConstraints="NO" id="sES-Z0-i9s">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="603"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Waiting for Authentication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HS-16-aXN">
+                                <rect key="frame" x="195" y="86" width="211" height="49"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="3HS-16-aXN" firstAttribute="top" secondItem="BFj-mK-3wY" secondAttribute="bottom" constant="66" id="H0g-Bw-2sJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eUo-cA-LWJ" secondAttribute="trailing" constant="186" id="Igf-aR-Ok7"/>
+                            <constraint firstItem="3HS-16-aXN" firstAttribute="leading" secondItem="HdB-xi-WH9" secondAttribute="leadingMargin" constant="130" id="Kpu-2g-DVx"/>
+                            <constraint firstItem="sES-Z0-i9s" firstAttribute="leading" secondItem="HdB-xi-WH9" secondAttribute="leading" id="QH3-j0-eFH"/>
                             <constraint firstItem="eUo-cA-LWJ" firstAttribute="top" secondItem="BFj-mK-3wY" secondAttribute="bottom" constant="180" id="Wce-D5-o11"/>
+                            <constraint firstItem="wLD-mQ-w1J" firstAttribute="top" secondItem="sES-Z0-i9s" secondAttribute="bottom" id="X28-QO-8yp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3HS-16-aXN" secondAttribute="trailing" constant="174" id="ZWl-cK-UuJ"/>
+                            <constraint firstItem="sES-Z0-i9s" firstAttribute="top" secondItem="HdB-xi-WH9" secondAttribute="top" constant="3" id="g1g-Yo-0eL"/>
+                            <constraint firstAttribute="trailing" secondItem="sES-Z0-i9s" secondAttribute="trailing" id="hWc-Ek-40b"/>
                             <constraint firstItem="wLD-mQ-w1J" firstAttribute="top" secondItem="eUo-cA-LWJ" secondAttribute="bottom" constant="272" id="oVx-O3-NNZ"/>
                             <constraint firstItem="eUo-cA-LWJ" firstAttribute="leading" secondItem="HdB-xi-WH9" secondAttribute="leadingMargin" constant="134" id="yek-dv-I0c"/>
                         </constraints>
@@ -56,4 +65,7 @@
             <point key="canvasLocation" x="-79" y="-154"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Noise Logo 1080x1920" width="1080" height="1920"/>
+    </resources>
 </document>
