@@ -1,15 +1,17 @@
 import UIKit
+import RealmSwift
+import Locksmith
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
         // Override username and password events
         usernameTextField.delegate = self;
         passwordTextField.delegate = self;
@@ -33,33 +35,64 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         } else if textField == passwordTextField {
             textField.resignFirstResponder()
             
+            // Attach listeners
+            NSNotificationCenter.defaultCenter().addObserver(
+                self,
+                selector: #selector(handleSignInNotification),
+                name: "signin",
+                object: nil)
+
             // Log in
             let userName = usernameTextField.text
             let userPassword = passwordTextField.text
-            let user: [String: String] = ["username": userName!, "password": userPassword!]
-            SocketIOManager.sharedInstance.signIn(user, handleSignIn: handleSignIn)
+            let user: [String: String] = [
+                "username": userName!,
+                "password": userPassword!
+            ]
+
+            SocketIOManager.sharedInstance.signIn(user)
         }
         
         return true
     }
     
-    @IBAction func signUpButtonClicked(sender: AnyObject) {
-        self.performSegueWithIdentifier("signUpSegue", sender: self)
-    }
+    @objc func handleSignInNotification(notification: NSNotification) -> Void {
+        
+        if let signInObj = notification.userInfo {
+            
+            let userObj = signInObj["user"]
+            
+            // insert user data in realm
+            let user = User()
+            user.firstname = userObj!["firstname"] as! String
+            user.lastname = userObj!["lastname"] as! String
+            user.username = userObj!["username"] as! String
+            user.userID = Int(userObj!["userID"] as! String)!
+            user.ID = 0
+            
+            try! realm.write {
+                realm.add(user, update:true)
+            }
 
-    func handleSignIn(success: Bool) {
-        if success {
             performSegueWithIdentifier("loginToFriendsListSegue", sender: self)
+            
         } else {
             let alert:UIAlertController = UIAlertController(title: "Ooftah!", message: "username or password is incorrect", preferredStyle: UIAlertControllerStyle.Alert)
             let action:UIAlertAction = UIAlertAction(title: "okee", style: UIAlertActionStyle.Default) { (a: UIAlertAction) -> Void in
-                print("okee selected")
+                print("okee button selected")
             }
             alert.addAction(action)
             self.presentViewController(alert, animated:true) { () -> Void in
-                print("alert presented")
+                print("alert presented for unsuccessful login")
             }
         }
+        
+        // Remove listener
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "signin", object: nil)
     }
-
+    
+    @IBAction func signUpButtonClicked(sender: AnyObject) {
+        self.performSegueWithIdentifier("signUpSegue", sender: self)
+    }
+    
 }

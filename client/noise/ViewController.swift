@@ -1,28 +1,24 @@
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidAppear(animated: Bool) {
-        // TODO: Change this to query our login state from Realm. If we're not logged in, show the intro/login view controller
-        let loggedIn = true
-        
-        if loggedIn {
-            self.performSegueWithIdentifier("friendsListSegue", sender: self)
-        } else {
+
+        let users = realm.objects(User)
+        if users.count == 0 {
             self.performSegueWithIdentifier("authSegue", sender: self)
+        } else {
+            self.performSegueWithIdentifier("friendsListSegue", sender: self)
         }
+        //DELETE THIS WHEN UNCOMMENT ^^^^^^^
+        //self.performSegueWithIdentifier("authSegue", sender: self)
     }
     
-    //    @IBAction func loginButtonClicked(sender: AnyObject) {
-    //        self.performSegueWithIdentifier("authSegue", sender: self)
-    //    }
-    //
-    //    @IBAction func friendsListButtonClicked(sender: AnyObject) {
-    //        self.performSegueWithIdentifier("friendsListSegue", sender: self)
-    //    }
     
 }
