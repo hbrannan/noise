@@ -15,6 +15,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Override username and password events
         usernameTextField.delegate = self;
         passwordTextField.delegate = self;
+        
+        
+        //navigationController.navigationBar.barTintColor = UIColor.init(red: 38, green: 38, blue: 38, alpha: 1)
+        //[self.navigationController.navigationBar
+        // setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+        //print("FLVC viewDidLoad");
     }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

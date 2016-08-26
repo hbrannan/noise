@@ -67,8 +67,10 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRF-ME-HIU">
                                         <rect key="frame" x="8" y="29" width="199" height="30"/>
+                                        <color key="tintColor" white="0.101090604" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Sign Up">
-                                            <color key="titleColor" red="0.50968191964285714" green="0.74426547178969038" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.25071134256191935" green="0.39240861910730224" blue="0.39989983977692312" alpha="0.60158943970000001" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="signUpButtonClicked:" destination="Vf3-GY-8Lb" eventType="touchUpInside" id="KlC-CT-bed"/>
@@ -115,6 +117,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jx-4y-WRH">
                                         <rect key="frame" x="8" y="8" width="184" height="40"/>
+                                        <color key="tintColor" red="0.2507113426" green="0.39240861910000002" blue="0.39989983979999999" alpha="0.60158943970000001" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="qJV-Vb-rra"/>
                                         </constraints>
@@ -124,6 +127,7 @@
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="d3p-9i-N0S">
                                         <rect key="frame" x="8" y="56" width="184" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
@@ -143,6 +147,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="join" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
+                                <color key="backgroundColor" red="0.48679734299999999" green="0.75376444890000005" blue="0.76666666670000005" alpha="0.60158943970000001" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="dVJ-y6-Rhg"/>
                                 </constraints>
@@ -153,6 +158,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saH-UQ-CGa">
                                         <rect key="frame" x="8" y="8" width="196" height="21"/>
+                                        <color key="tintColor" white="0.101090604" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="vh9-1a-Io2"/>
                                         </constraints>
@@ -162,12 +168,14 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kg-zI-6d1">
                                         <rect key="frame" x="8" y="29" width="196" height="30"/>
+                                        <color key="tintColor" white="0.101090604" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="logInButtonClicked:" destination="NXh-Sw-xkg" eventType="touchUpInside" id="HLI-Tv-hem"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" red="0.48679734299999999" green="0.75376444890000005" blue="0.76666666670000005" alpha="0.60158943970000001" colorSpace="calibratedRGB"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                         </subviews>
@@ -194,6 +202,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QN6-eK-YD8"/>
+        <segue reference="bUD-Q9-nUf"/>
     </inferredMetricsTieBreakers>
 </document>

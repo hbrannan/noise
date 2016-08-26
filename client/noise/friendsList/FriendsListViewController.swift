@@ -15,8 +15,11 @@ class FriendsListViewController: UIViewController, UITableViewDataSource, UITabl
         friendsTableView.dataSource = self
         friendsTableView.delegate = self
         
-        //print("FLVC viewDidLoad");
         
+//        [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+//        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+
+
         // on each page load query redis for pending key exchanges
         SocketIOManager.sharedInstance.checkForPendingKeyExchange(["userID": realm.objects(User)[0]["userID"]!]);
 
