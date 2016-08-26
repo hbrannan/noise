@@ -81,6 +81,7 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dEl-dr-fww" firstAttribute="centerX" secondItem="b9r-oC-Mjm" secondAttribute="centerX" id="QQf-h1-d0U"/>
                             <constraint firstItem="dEl-dr-fww" firstAttribute="top" secondItem="Jla-sz-ECg" secondAttribute="bottom" constant="70" id="WJG-Qg-gSJ"/>
